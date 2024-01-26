@@ -8,8 +8,11 @@
     </head>
 
     <body>
-        <img src="assets/logo/logo-01.svg"
-            width="400">
+        
+        <a href="index.html">
+            <img src="assets/logo/logo-01.svg" width="400">
+        </a>
+
         <hr>
         <!-- Navigation-Product Gallery -->
         <div class="navbar">
@@ -32,34 +35,23 @@
                 width="400">
             <p>Customize our delicious, hand-making cinnamons to your liking!</p>
 
-            <!--Dropdown for Glazing-->
-            <div>
-                <p>Glazing:</p>
-                <div class="dropdown">
-                    <button class="dropdownbtn">Keep original</button>
-                    <div class="dropdown-content">
-                        <a href="#">Keep original</a>
-                        <a href="#">Sugar milk</a>
-                        <a href="#">Vanilla milk</a>
-                        <a href="#">Double chocolate</a>
-                    </div>
-                </div>
-            </div>
-            
+            <!-- Dropdown for Glazing-->
+            <p>Glazing:</p>
+            <select class="selection">
+                <option value="Keep original">Keep original</option>
+                <option value="Sugar milk">Sugar milk</option>
+                <option value="Vanilla milk">Vanilla milk</option>
+                <option value="Double chocolate">Double chocolate</option>
+            </select>
 
-            <!--Dropdown for Pack size-->
-            <div>
-                <p>Pack size:</p>
-                <div class="dropdown">
-                    <button class="dropdownbtn">1</button>
-                    <div class="dropdown-content">
-                        <a href="#">1</a>
-                        <a href="#">3</a>
-                        <a href="#">6</a>
-                        <a href="#">12</a>
-                    </div>
-                </div>
-            </div>
+            <!-- Dropdown for Pack size-->
+            <p>Pack size:</p>
+            <select class="selection">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="12">12</option>
+            </select>
             
             <!-- Adding product to cart -->
             <div class="product-summary">
