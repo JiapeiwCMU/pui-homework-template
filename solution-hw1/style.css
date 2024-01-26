@@ -42,44 +42,12 @@
     border: 2px solid black;
 }
 
-
+.selection{
+    padding:10px;
+}
 .product-name{
     text-decoration-line:underline;
 }
-
-/* Dropdown Menu */
-.dropdown{
-    position:relative;
-    display:inline-block;
-}
-.dropdown .dropdownbtn{
-    border:1px solid black;
-    background-color:white;
-    color:black;
-    padding:8px 16px;
-}
-.dropdown-content{
-    display:none;
-    position:absolute;
-    background-color:white;
-    z-index:1;
-}
-.dropdown-content a{
-    display: block;
-    /* float: none; */
-    color: black;
-    border:1px solid black;
-    padding: 5px 16px;
-    text-decoration: none;
-    text-align: left;
-}
-.dropdown-content a:hover{
-    background-color:lightgrey;
-}
-.dropdown:hover .dropdown-content{
-    display:block;
-}
-
 
 /* To add the product to cart */
 .product-summary{
