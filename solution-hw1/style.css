@@ -26,14 +26,13 @@
 
 .product-info,.product-detail{
     text-align:center;
-    padding:10px;
     font-size:15px;
     font-family:helvetica;
 }
 
 .product-info:hover{
-    margin:0% auto;
-    /* display:inline-block; */
+    margin:0% 420px;
+    display:inline-block;
     background-color:yellow;
 }
 
@@ -43,6 +42,7 @@
     border: 2px solid black;
 }
 
+
 .product-name{
     text-decoration-line:underline;
 }
@@ -51,32 +51,50 @@
 .dropdown{
     position:relative;
     display:inline-block;
-    overflow:hidden;
 }
 .dropdown .dropdownbtn{
     border:1px solid black;
     background-color:white;
     color:black;
-    padding:10px 16px;
+    padding:8px 16px;
 }
 .dropdown-content{
     display:none;
     position:absolute;
     background-color:white;
-    /* box-shadow:0px 8px 16px rgba(0,0,0,0.2); */
+    z-index:1;
 }
 .dropdown-content a{
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
     display: block;
+    /* float: none; */
+    color: black;
+    border:1px solid black;
+    padding: 5px 16px;
+    text-decoration: none;
     text-align: left;
 }
 .dropdown-content a:hover{
-    background-color:grey;
-
+    background-color:lightgrey;
 }
 .dropdown:hover .dropdown-content{
     display:block;
+}
+
+
+/* To add the product to cart */
+.product-summary{
+    font-weight:bold;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+}
+
+.yellow-button{
+    display:inline-block;
+    background-color:yellow;
+    padding:10px 20px;
+    border:1px solid black;
+}
+.price{
+    margin-right:20px;
 }
