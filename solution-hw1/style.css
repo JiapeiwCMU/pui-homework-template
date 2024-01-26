@@ -43,3 +43,24 @@
     margin:0% auto;
     border: 2px solid black;
 }
+
+.product-name{
+    text-decoration-line:underline;
+}
+
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background-color:white;
+    box-shadow:0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
