@@ -21,7 +21,7 @@ hr{
     border-top:3px solid black;
 }
 
-/* Product Information */
+/* Product Page & Cart Page Display */
 .product-page{
     text-align:center;
     color:black;
@@ -50,21 +50,30 @@ hr{
     padding:20px;
 }
 
+
+/* Product Detail Info */
+.product-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
 .product-info,.product-detail{
-    text-align:center;
+    /* text-align:center; */
+    width:30%;
+    margin:10px;
     font-size:15px;
     font-family:helvetica;
 }
 
 .product-info:hover{
     margin:0 auto;
-    width:300px;
+    width:auto;
     background-color:yellow;
 }
 
 .product-info img,.product-detail img{
     display:block;
-    margin:0% auto;
+    margin:0 auto;
     border: 2px solid black;
 }
 
