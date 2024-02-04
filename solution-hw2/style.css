@@ -23,7 +23,6 @@
 }
 .navbar a{
     all:unset;
-    
     margin-left: 40px;
     margin-right:40px;
 }
@@ -90,7 +89,6 @@ hr{
     border: 2px solid black;
 }
 .product-info{
-    /* text-align:center; */
     width:30%;
     margin:0 auto;
     font-size:15px;
@@ -117,7 +115,6 @@ hr{
     align-content:space-between;
     position:relative;
 }
-
 .selection{
     padding:10px;
     width:100%;
@@ -135,11 +132,9 @@ hr{
     right:0px;
     bottom:0px;
     font-weight:bold;
-    /* padding:30px; */
     display:flex;
     justify-content:center;
 }
-
 .yellow-button{
     display:inline-block;
     background-color:yellow;
