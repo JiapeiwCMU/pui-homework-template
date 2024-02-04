@@ -140,6 +140,7 @@ hr{
     background-color:yellow;
     padding:10px 20px;
     border:1px solid black;
+    font-weight:bold;
 }
 .price{
     margin-right:20px;
