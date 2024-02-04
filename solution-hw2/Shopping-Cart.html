@@ -8,56 +8,81 @@
     </head>
 
     <body>
-        <!-- LOGO -->
-        <a href="index.html">
-            <img src="assets/logo/logo-01.svg" width="400">
-        </a>
-        
-        <hr>
+        <div class="headings">
+            <div class="logo">
+                <!-- LOGO -->
+                <a href="index.html">
+                    <img src="assets/logo/logo-01.svg" width="400">
+                </a>
+            </div>
+            
+            <div class="navinfo">
+                <!-- Navigation -->
+                <div class="navbar">
+                    <a href="index.html">
+                        <h1 class="product-page"><span>PRODUCTS</span></h1>
+                    </a>
+                    <a href="Shopping-Cart.html">
+                        <h1 class="cart-page"><span>CART</span></h1>
+                    </a>
+                    <span class="dot">2</span>
+                </div>
 
-        <!-- Navigation -->
-        <div class="navbar">
-            <a href="index.html">
-                <h1 class="product-page">PRODUCTS</h1>
-            </a>
-        </div>
-        <div class="navbar">
-            <a href="Shopping-Cart.html">
-                <h1 class="cart-page"><span>CART</span></h1>
-            </a>
-        </div>
-        
-        <p class="introduction">Shopping Cart</p>
+                <!-- Horizontal Line -->
+                <hr>
 
-        <!-- Shooping Cart information -->
-        <div class="product-info">
-            <!--Original Cinnamon Roll-->
-            <img src="assets/products/original-cinnamon-roll.jpg"
-                width="200">
+                <p class="introduction">Our hand-made cinnamon rolls</p>
+            </div>
+        </div>
+
+
+        <div class="cart-summary">
+            <div class="product-info">
+                <!--Original Cinnamon Roll-->
+                <img src="assets/products/original-cinnamon-roll.jpg"
+                    width="200">
+                <div class="cart-detail-info">
+                    <div class="products-in-cart">
+                        <p>Original Cinnamon Roll</p>
+                        <p>Glazing: Keep original</p>
+                        <p>Pack Size: 1</p>
+                    </div>
+                    <p class="price">$2.49</p>
+                </div>
+            </div>
+    
             <p class="remove">Remove</p>
-            <p>Original Cinnamon Roll</p>
-            <p>Glazing: Keep original</p>
-            <p>Pack Size: 1</p>
-            <p>$2.49</p>
-        </div>
+    
+            <div class="product-info">
+                <!--Double Chocolate Cinnamon Roll-->
+                <img src="assets/products/double-chocolate-cinnamon-roll.jpg"
+                    width="200">
+                <div class="cart-detail-info">
+                    <div class="products-in-cart">
+                        <p>Double Chocolate Cinnamon Roll</p>
+                        <p>Glazing: Sugar Milk</p>
+                        <p>Pack Size: 6</p>
+                    </div>
+                    <p class="price">$27.45</p>
+                </div> 
+            </div>
 
-        <div class="product-info">
-            <!--Double Chocolate Cinnamon Roll-->
-            <img src="assets/products/double-chocolate-cinnamon-roll.jpg"
-                width="200">
             <p class="remove">Remove</p>
-            <p>Double Chocolate Cinnamon Roll</p>
-            <p>Glazing: Sugar Milk</p>
-            <p>Pack Size: 6</p>
-            <p>$27.45</p>
-        </div>
+            <hr class="divide-line">
 
-        <hr>
-        
-        <!-- Order Summary -->
-        <div class="order-summary">
-            <p>Total: $29.94</p>
-            <button class="yellow-button">Checkout</button>
+            <!-- Order Summary -->
+            <div class="outline-order-summary">
+                <div class="order-summary">
+                    <p>Total:</p>
+                    <p>$29.94</p>
+                </div>
+                <button class="yellow-button">Checkout</button>
+            </div>
+            
+            
         </div>
+        
+        
+        
     </body>
 </html>
