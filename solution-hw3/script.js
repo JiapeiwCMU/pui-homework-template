@@ -40,7 +40,7 @@ function onSelectValueChange(){
     // call displayPrice with the index
 
     let selectionIndex = parseInt(this.value)
-    let 
+    console.log("selection Index=", celectionIndex)
 }
 
 let selectElement = document.querySelector(".selection-glazing")
