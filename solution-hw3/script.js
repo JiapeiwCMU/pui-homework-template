@@ -1,49 +1,69 @@
 let glazingOptions = [
-    {"Keep original":0},
-    {"Sugar milk":0},
-    {"Vanilla milk":0.5},
-    {"Double chocolate":1.5}
+    {add:0},
+    {add:0},
+    {add:0.5},
+    {add:1.5},
 ]
 
 let priceOptions = [
-    {"1":1},
-    {"3":3},
-    {"6":5},
-    {"12":10}
+    {size:1},
+    {size:3},
+    {size:5},
+    {size:10},
 ]
 
-let originalPrice = document.querySelector(".price")
+
+let basePrice = 2.49
+let glazingSelect = document.querySelector("#selection-glazing")
+console.log(glazingSelect)
+let sizeSelect = document.querySelector("#selection-packsize")
+console.log(sizeSelect)
 
 
-// let glazingValue = glazingDropdown.value
-// let packValue = packDropdown.value
 
+function displayPrice(glazingToDisplay, sizeToDisplay){
+    // get the option and pack size
+    // let final price = (basePrice+glazing)*size
+    // queryselector price
+    // price.innerText = new price
+    let glazingPrice = glazingToDisplay.add
+    let packSize = sizeToDisplay.size
 
-// let glazingPrice = glazinOptions.glazingValue
-// let packSize = priceOptions.packValue
+    let individualPrice = basePrice+glazingPrice
+    let finalPrice = individualPrice*packSize
 
-// console.log("total:",(originalPrice+glazingPrice)*packSize)
-
-// function displayPrice(price){
-
-// }
-function displayPrice(glazing,size){
-    // Display the price after calculation
-    // querySelector to retrieve the price
-    let finalPrice = (originalPrice+glazingOptions.glazing)*priceOptions.size
-
+    let totalPrice = document.querySelector(".price")
+    totalPrice.innerText="$"+finalPrice.toFixed(2)
 
 }
 
-function onSelectValueChange(){
-    // get the current information from selection
-    // call displayPrice with the index
 
-    let selectionIndex = parseInt(this.value)
-    console.log("selection Index=", celectionIndex)
-}
 
-let selectElement = document.querySelector(".selection-glazing")
+function priceChange() {
+    // get value of selected glazing option
+    // let priceOption = this.value;
 
-selectElement.addEventListener('change',onSelectValueChange)
+    let glazing = document.querySelector("#selection-glazing")
+    let size = document.querySelector("#selection-packsize")
+    
+
+
+    let glazingIndex = parseInt(glazing.value)
+
+    let sizeIndex = parseInt(size.value)
+
+    let glazingToDisplay = glazingOptions[glazingIndex]
+    let sizeToDisplay = priceOptions[sizeIndex]
+
+    console.log(glazingToDisplay)
+    console.log(sizeToDisplay)
+
+    displayPrice(glazingToDisplay,sizeToDisplay)
+    
+
+  }
+
+// glazingSelect.addEventListener('change',priceChange)
+// sizeSelect.addEventListener('change',priceChange)
+
 
