@@ -68,6 +68,7 @@ hr{
 
 /* Product List Info */
 .product-container{
+    padding:60px;
     width:80%;
     margin: 0% auto;
     display:flex;
@@ -98,6 +99,7 @@ hr{
 
 /* product detail */
 .product-detail{
+    padding:30px;
     display:flex;
     justify-content:center;
     font-family:helvetica;
@@ -109,11 +111,15 @@ hr{
 }
 
 .detail-info{
+    /* padding: 30px; */
     display:flex;
     flex-direction:column;
-    width:200px;
+    width:300px;
     align-content:space-between;
     position:relative;
+}
+.dropdown{
+    padding-top:60px;
 }
 #selection-glazing{
     padding:10px;
