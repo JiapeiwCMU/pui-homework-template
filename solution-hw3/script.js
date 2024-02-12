@@ -23,9 +23,8 @@ console.log(sizeSelect)
 
 function displayPrice(glazingToDisplay, sizeToDisplay){
     // get the option and pack size
-    // let final price = (basePrice+glazing)*size
-    // queryselector price
-    // price.innerText = new price
+    // calculate the final price based on them
+    // display total price
     let glazingPrice = glazingToDisplay.add
     let packSize = sizeToDisplay.size
 
@@ -41,7 +40,8 @@ function displayPrice(glazingToDisplay, sizeToDisplay){
 
 function priceChange() {
     // get value of selected glazing option
-    // let priceOption = this.value;
+    // get the index from original selection
+    // find corresponding option from list above
 
     let glazing = document.querySelector("#selection-glazing")
     let size = document.querySelector("#selection-packsize")
@@ -63,7 +63,5 @@ function priceChange() {
 
   }
 
-// glazingSelect.addEventListener('change',priceChange)
-// sizeSelect.addEventListener('change',priceChange)
 
 
