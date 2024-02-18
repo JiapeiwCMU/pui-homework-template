@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Product Detail</title>
         <script defer src="script.js"></script>
+        <script src="rollsData.js"></script>
     </head>
 
     <body>
@@ -39,7 +40,7 @@
         <div class="product-detail">
             <!--Original Cinnamon Roll-->
             <img src="assets/products/original-cinnamon-roll.jpg"
-                width="500" alt="original cinnamon roll">
+                width="500" alt="original cinnamon roll" class="page-image">
 
             <div class="detail-info">
                 <p>Customize our delicious, hand-making cinnamons to your liking!</p>
@@ -67,7 +68,7 @@
                 <!-- Adding product to cart -->
                 <div class="product-summary">
                     <p class="price">$2.49</p>
-                    <button class="yellow-button">Add to Cart</button>
+                    <button class="yellow-button" onClick="addCart()">Add to Cart</button>
                 </div>
             </div>    
             
