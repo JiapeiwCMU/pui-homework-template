@@ -1,3 +1,29 @@
+// create Roll class
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+        this.totalPrice = (basePrice + allGlazings[glazing]*allSizes[size])
+    }
+}
+
+let glazingOptions = [
+    {flavor:"Keep original", price:0},
+    {flavor:"Sugar milk", price:0},
+    {flavor:"Vanilla milk", price:0.5},
+    {flavor:"Double Chocolate", price:1.5},
+]
+
+let sizeOptions = [
+    {quantity:1, adaption:1},
+    {quantity:3, adaption:3},
+    {quantity:6, adaption:5},
+    {quantity:12, adaption:10},
+]
+
+// initialize glazing and size
 let glazing = document.querySelector("#selection-glazing")
 let size = document.querySelector("#selection-packsize")
 
@@ -10,7 +36,21 @@ rollType = params.get('roll')
 rollPrice = rolls[rollType].basePrice
 imagePath = rolls[rollType].imageFile
 
+// Glazing Options to Select
+for (let i = 0; i<glazingOptions.length; i++){
+    var option = document.createElement('option')
+    option.text = glazingOptions[i].flavor
+    option.value = glazingOptions[i].price
+    glazing.add(option)
+}
 
+// Pack Size Options to select
+for (let i = 0; i<sizeOptions.length; i++){
+    var option = document.createElement('option')
+    option.text = sizeOptions[i].quantity
+    option.value = sizeOptions[i].adaption
+    size.add(option)
+}
 
 // update header
 let pageHeader = document.querySelector(".introduction")
@@ -29,44 +69,10 @@ priceShown.innerText="$"+basePrice
 const cart=[]
 
 
-class Roll {
-    constructor(rollType, rollGlazing, packSize, basePrice) {
-        this.type = rollType;
-        this.glazing =  rollGlazing;
-        this.size = packSize;
-        this.basePrice = basePrice;
-    }
-}
 
-let glazingOptions = [
-    {flavor:"Keep original", price:0},
-    {flavor:"Sugar milk", price:0},
-    {flavor:"Vanilla milk", price:0.5},
-    {flavor:"Double Chocolate", price:1.5},
-]
 
-let sizeOptions = [
-    {quantity:1, adaption:1},
-    {quantity:3, adaption:3},
-    {quantity:6, adaption:5},
-    {quantity:12, adaption:10},
-]
 
-// Glazing Options to Select
-for (let i = 0; i<glazingOptions.length; i++){
-    var option = document.createElement('option')
-    option.text = glazingOptions[i].flavor
-    option.value = glazingOptions[i].price
-    glazing.add(option)
-}
 
-// Pack Size Options to select
-for (let i = 0; i<sizeOptions.length; i++){
-    var option = document.createElement('option')
-    option.text = sizeOptions[i].quantity
-    option.value = sizeOptions[i].adaption
-    size.add(option)
-}
 
 
 
@@ -80,9 +86,7 @@ function displayPrice(glazingToDisplay, sizeToDisplay){
 
     let totalPrice = document.querySelector(".price")
     totalPrice.innerText="$"+finalPrice.toFixed(2)
-
 }
-
 
 function priceChange() {
     // get value of selected glazing option
@@ -98,11 +102,6 @@ function priceChange() {
 
     displayPrice(glazingToDisplay,sizeToDisplay)
   }
-
-
-
-
-
 
 function addCart(){
     let glazingSelect = document.querySelector("#selection-glazing")
