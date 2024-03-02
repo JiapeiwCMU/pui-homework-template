@@ -1,0 +1,157 @@
+/* Citations */
+/* https://www.w3schools.com/howto/howto_css_style_hr.asp */
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_circles */
+
+
+
+/* Headings */
+.headings{
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+.logo{
+    flex:0 0 auto;
+}
+.navinfo{
+    flex:1;
+    position:relative;
+}
+.navbar{
+    display:flex;
+    justify-content:flex-end;
+}
+.navbar a{
+    all:unset;
+    margin-left: 40px;
+    margin-right:40px;
+}
+.dot{
+    position:absolute;
+    top:0px;
+    right:0px;
+    background-color:red;
+    border-radius:50%;
+    padding: 5px 10px;
+    font-family:helvetica;
+    color:white;
+}
+hr{
+    border-top:3px solid black;
+}
+
+/* Product Page & Cart Page Display */
+.product-page{
+    text-align:center;
+    color:black;
+    font-size:20px;
+    font-family:helvetica;
+    padding:5px;
+}
+.product-page span{
+    background:yellow;
+}
+.cart-page{
+    text-align:center;
+    color:black;
+    font-size:20px;
+    font-family:helvetica;
+    font-weight:normal;
+    padding:5px;
+}
+.introduction{
+    text-align:left;
+    font-size:20px;
+    font-family:helvetica;
+    padding:20px;
+}
+
+/* Product List Info */
+.product-container{
+    padding:60px;
+    width:80%;
+    margin: 0% auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+.product-container a{
+    all:unset;
+}
+.product-info:hover{
+    margin:0 auto;
+    width:30%;
+    background-color:yellow;
+}
+.product-info img{
+    display:block;
+    margin:0 auto;
+    border: 2px solid black;
+}
+.product-info{
+    width:30%;
+    margin:0 auto;
+    font-size:15px;
+    font-family:helvetica;
+}
+
+
+/* product detail */
+.product-detail{
+    padding:30px;
+    display:flex;
+    justify-content:center;
+    font-family:helvetica;
+}
+.product-detail img{
+    display:block;
+    margin:10px;
+    border:2px solid black;
+}
+
+.detail-info{
+    /* padding: 30px; */
+    display:flex;
+    flex-direction:column;
+    width:300px;
+    align-content:space-between;
+    position:relative;
+}
+.dropdown{
+    padding-top:60px;
+}
+#selection-glazing{
+    padding:10px;
+    width:100%;
+}
+#selection-packsize{
+    padding:10px;
+    width:100%;
+}
+.product-name{
+    text-decoration-line:underline;
+}
+.product-name:hover{
+    font-weight:bold;
+}
+
+/* To add the product to cart */
+.product-summary{
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+}
+.yellow-button{
+    display:inline-block;
+    background-color:yellow;
+    padding:10px 20px;
+    border:1px solid black;
+    font-weight:bold;
+}
+.price{
+    margin-right:20px;
+}
