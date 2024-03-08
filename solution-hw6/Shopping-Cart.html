@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="style2.css">
+        <title>Shopping Cart</title>
+        <script defer src="scriptCart.js"></script>
+
+        <script src="rollsData.js"></script>
+
+    </head>
+
+    <body>
+        <div class="headings">
+            <div class="logo">
+                <!-- LOGO -->
+                <a href="index.html">
+                    <img src="assets/logo/logo-01.svg" width="400" alt="logo">
+                </a>
+            </div>
+            
+            <div class="navinfo">
+                <!-- Navigation -->
+                <div class="navbar">
+                    <a href="index.html">
+                        <h1 class="product-page"><span>PRODUCTS</span></h1>
+                    </a>
+                    <a href="Shopping-Cart.html">
+                        <h1 class="cart-page"><span>CART</span></h1>
+                    </a>
+                    <span class="dot">2</span>
+                </div>
+
+                <!-- Horizontal Line -->
+                <hr>
+
+                <p class="cart-introduction">Shopping Cart</p>
+            </div>
+        </div>
+
+
+        <!-- make a template for shopping cart summary -->
+        <div class="shoppingCartSummary">
+             <template id="cart-template">
+                <div class="cart-item">
+                    <div class="cart-product-info">
+                        <div class="shoppingCartImg">
+                            <img src="assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"
+                            width="200px" height="200px">
+                        </div>
+                        <div class="cart-detail-info">
+                            <div class="cartDescription">
+                                <div class="cartItemTitle">
+                                    Cart Item Title
+                                </div>
+                                <div class="cartItemGlazing">
+                                    Cart Item Glazing
+                                </div>
+                                <div class="cartItemSize">
+                                    Cart Item Size
+                                </div>  
+                            </div>
+                            <div class="cartItemPrice">
+                                $2.49
+                            </div>
+                        </div>   
+                    </div>
+
+                    <div id="cartRemove">
+                        Remove
+                    </div>
+                    
+                </div>
+            </template>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="checkout">
+            <div class="order-summary">
+                <div class="cart-total">
+                    Total:
+                </div>
+                <div class="cart-total-price">
+                    $totalPrice
+                </div>
+            </div>
+            <button class="yellow-button">Checkout</button>
+        </div>
+        </div> 
+        
+        
+        
+    </body>
+</html>
