@@ -1,0 +1,138 @@
+/* Headings */
+
+.headings{
+    display:flex;
+    align-items:center;
+    width:100%;
+}
+.logo{
+    flex:0 0 auto;
+}
+.navinfo{
+    flex:1;
+    position:relative;
+}
+.navbar{
+    display:flex;
+    justify-content:flex-end;
+}
+.navbar a{
+    all:unset;
+    margin-left: 40px;
+    margin-right:40px;
+}
+.dot{
+    position:absolute;
+    top:0px;
+    right:0px;
+    background-color:red;
+    border-radius:50%;
+    padding: 5px 10px;
+    font-family:helvetica;
+    color:white;
+}
+hr{
+    border-top:3px solid black;
+}
+
+
+/* Product Page & Cart Page Display */
+
+.product-page{
+    text-align:center;
+    color:black;
+    font-size:20px;
+    font-family:helvetica;
+    padding:5px;
+}
+.product-page span{
+    background:yellow;
+}
+.cart-page{
+    text-align:center;
+    color:black;
+    font-size:20px;
+    font-family:helvetica;
+    font-weight:normal;
+    padding:5px;
+}
+.cart-introduction{
+    text-align:left;
+    font-size:20px;
+    font-family:helvetica;
+    padding:20px;
+}
+
+
+/* Summary of Cart products */
+.cart-item{
+    display:flex;
+    justify-content: flex-start;
+    width:600px;
+    margin: 0 auto;
+    flex-flow:column;
+}
+
+.cart-product-info{
+    display:flex;
+    align-items:center;
+    font-size:15px;
+    font-family:helvetica;
+}
+
+.cart-detail-info{
+    display:flex;
+    padding: 20px;
+    width:400px;
+    justify-content:space-between;
+    align-items:center;
+}
+.shoppingCartImg img{
+    display:block;
+    border: 2px solid black;
+}
+
+#cartRemove{
+    font-family:helvetica;
+    text-decoration:underline;
+    font-weight:bold;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.divide-line{
+    width:600px;
+    margin:0 auto;
+}
+.total-amount{
+    display:flex;
+    width:400px;
+    margin:0 auto;
+    flex-flow:column;
+}
+.checkout{
+    display:flex;
+    flex-flow:column;
+    width:600px;
+    margin:0 auto;
+    justify-content:flex-end;
+}
+.order-summary{
+    display:flex;
+    font-size:15px;
+    font-family:helvetica;
+    padding: 20px;
+    width:360px;
+    justify-content:space-between;
+    align-items:center;
+    margin-left:auto;
+}
+.yellow-button{
+    width:100px;
+    display:inline-block;
+    background-color:yellow;
+    padding:10px 20px;
+    border:1px solid black;
+    margin-left:auto;
+    font-weight:bold;
+}
