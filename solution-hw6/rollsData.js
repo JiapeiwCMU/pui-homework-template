@@ -24,3 +24,19 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpg"
     }    
 };
+
+
+let glazingOptions = [
+    {flavor:"Keep Original", price:0},
+    {flavor:"Sugar Milk", price:0},
+    {flavor:"Vanilla Milk", price:0.5},
+    {flavor:"Double Chocolate", price:1.5},
+]
+
+
+let sizeOptions = [
+    {quantity:1, adaption:1},
+    {quantity:3, adaption:3},
+    {quantity:6, adaption:5},
+    {quantity:12, adaption:10},
+]
