@@ -5,36 +5,23 @@ class Roll {
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = basePrice;
-        this.totalPrice = (basePrice + allGlazings[glazing]*allSizes[size])
     }
+    
 }
-
-let glazingOptions = [
-    {flavor:"Keep original", price:0},
-    {flavor:"Sugar milk", price:0},
-    {flavor:"Vanilla milk", price:0.5},
-    {flavor:"Double Chocolate", price:1.5},
-]
-
-let sizeOptions = [
-    {quantity:1, adaption:1},
-    {quantity:3, adaption:3},
-    {quantity:6, adaption:5},
-    {quantity:12, adaption:10},
-]
 
 // initialize glazing and size
 let glazing = document.querySelector("#selection-glazing")
 let size = document.querySelector("#selection-packsize")
+let addButton = document.querySelector('.yellow-button')
 
 // extracting current roll
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString)
 const chosenRoll = params.get('roll')
 
-rollType = params.get('roll')
-rollPrice = rolls[rollType].basePrice
-imagePath = rolls[rollType].imageFile
+addButton.addEventListener('click',addCart)
+addButton.addEventListener('click',displayCartBadge)
+
 
 // Glazing Options to Select
 for (let i = 0; i<glazingOptions.length; i++){
@@ -64,17 +51,8 @@ pageImg.src=imgPath
 // update Price
 let priceShown=document.querySelector('.price')
 let basePrice = rolls[chosenRoll].basePrice
+
 priceShown.innerText="$"+basePrice
-
-const cart=[]
-
-
-
-
-
-
-
-
 
 function displayPrice(glazingToDisplay, sizeToDisplay){
     // get the option and pack size
@@ -104,18 +82,35 @@ function priceChange() {
   }
 
 function addCart(){
+    
     let glazingSelect = document.querySelector("#selection-glazing")
     let sizeSelect = document.querySelector("#selection-packsize")
 
     let selectedGlazing = glazingOptions[glazingSelect.selectedIndex].flavor
     let selectedPackSize = sizeOptions[sizeSelect.selectedIndex].quantity
 
+
+    const existingCart = JSON.parse(localStorage.getItem('cart'))||[]
     const newRoll = new Roll(chosenRoll,selectedGlazing,selectedPackSize,basePrice)
 
-    cart.push(newRoll)
+    existingCart.push(newRoll)
 
-    console.log("cart:",cart)
+    console.log("cart:",existingCart)
+    localStorage.setItem('cart',JSON.stringify(existingCart))
 }
+
+function displayCartBadge(){
+    const existingCart = JSON.parse(localStorage.getItem('cart'))||[]
+    let cartBadge = document.getElementById('cart-badge')
+    cartBadge.textContent = existingCart.length || 0
+}
+
+displayCartBadge()
+
+
+
+
+
 
 
 
