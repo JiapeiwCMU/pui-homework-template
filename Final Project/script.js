@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded",loadCover);
 
 function loadCover(){
     const basePath = 'resources';
-    const photoBoxes = document.querySelectorAll('.container .box');
-    boxes.forEach(box,index =>{
-        let albumFolder = 'album${index+1}';
-        let imagePath = '${basePath}/${albumFolder}/Cover.JPG';
-        box.style.backgroundImage = 'url("${imagePath}")';
-        box.style.backgroundSize = 'cover';
-        box.style.backgroundPosition = 'center';
+    const boxes = document.querySelectorAll('.container .box');
+    boxes.forEach((box,index) =>{
+        let albumFolder = `album${index+1}`;
+        let imagePath = `${basePath}/${albumFolder}/Cover.JPG`;
+        box.style.backgroundImage = `url("${imagePath}")`;
+        box.style.backgroundSize = `cover`;
+        box.style.backgroundPosition = `center`;
     })
 }
 
