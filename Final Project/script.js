@@ -16,6 +16,11 @@ function loadCover(){
 
 const boxes = document.querySelectorAll('.box')
 boxes.forEach(box =>{
+
+    box.addEventListener('click',function(){
+        window.location.href = this.getAttribute('data-url');
+    })
+
     box.addEventListener('mouseover',(event)=>{
 
         const prevSibling = event.target.previousElementSibling;
