@@ -1,4 +1,87 @@
-img{
-    width:200px;
-    height:200px;
+
+.heading{
+    font-size:20px;
+    font-family:'Arial', sans-serif;
+    display:flex;
+    justify-content:space-between;
+}
+
+.photo-display{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    position:relative;
+    display:grid;
+    grid-gap: 15px;
+    width: 1000px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(7,250px);
+    grid-template-areas:"img1 img1 img1 img1"
+                        "img2 img2 img3 img3"
+                        "img4 img5 img5 img5"
+                        "img4 img6 img6 img7"
+                        "img8 img9 img9 img7"
+                        "img8 img10 img10 img10"
+                        "img11 img11 img12 img12";
+}
+
+.container .img1{
+    grid-area: img1;
+}
+.container .img2{
+    grid-area: img2;
+}
+.container .img3{
+    grid-area: img3;
+}
+.container .img4{
+    grid-area: img4;
+}
+.container .img5{
+    grid-area: img5;
+}
+.container .img6{
+    grid-area: img6;
+}
+.container .img7{
+    grid-area: img7;
+}
+.container .img8{
+    grid-area: img8;
+}
+.container .img9{
+    grid-area: img9;
+}
+.container .img10{
+    grid-area: img10;
+}
+.container .img11{
+    grid-area: img11;
+}
+.container .img12{
+    grid-area: img12;
+}
+
+.container .photo{
+    position:relative;
+    
+}
+
+.container .photo img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:10px;
+    transition:0.5s;
+}
+
+/* when you hover over a picture, you can make the picture 1.05 times the size */
+.photo img:hover{
+    scale:1.05;
 }
