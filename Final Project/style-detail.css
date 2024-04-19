@@ -83,5 +83,5 @@
 
 /* when you hover over a picture, you can make the picture 1.05 times the size */
 .photo img:hover{
-    scale:1.05;
+    scale:1.01;
 }
