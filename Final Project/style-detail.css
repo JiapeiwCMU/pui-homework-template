@@ -5,6 +5,10 @@
     display:flex;
     justify-content:space-between;
 }
+a{
+    all:unset;
+}
+
 
 .photo-display{
     display:flex;
