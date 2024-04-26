@@ -1,3 +1,7 @@
+// import Swup from 'https://unpkg.com/swup@4?module';
+// import SwupParallelPlugin from 'https://unpkg.com/@swup/parallel-plugin@0?module';
+
+
 function makeAlbumPaths(albumCount, totalImages) {
     const albums = {};
     for (let i=1; i<=albumCount; i++) {
