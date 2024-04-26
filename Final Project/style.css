@@ -18,11 +18,21 @@
     padding-right:15px;
 }
 
-.subheading01:hover p {
+/* .subheading01:hover p {
     background-color:#475cd6;
     color: white;
     border-radius:10px;
     transition:0.5s;
+} */
+
+#Recording:hover{
+    background-color:black;
+    color:white;
+}
+
+#Life-Moments:hover{
+    background-color:black;
+    color:white;
 }
 
 .subheading02{
