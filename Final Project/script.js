@@ -28,7 +28,7 @@ boxes.forEach(box =>{
         window.location.href = this.getAttribute('data-url');
     })
 
-    box.addEventListener('mouseover',(event)=>{
+    box.addEventListener('mouseenter',(event)=>{
 
         const prevSibling = event.target.previousElementSibling;
         const prevPrevSibling = prevSibling?.previousElementSibling;
@@ -56,7 +56,7 @@ boxes.forEach(box =>{
             nextSibling.classList.add('next1');  
         }
     })
-    box.addEventListener('mouseout',(event)=>{
+    box.addEventListener('mouseleave',(event)=>{
         const parent = event.target.parentElement;
         const siblings = parent.querySelectorAll('.next1,.next2,.prev1,.prev2,.hovered');
         siblings.forEach(sibling => sibling.classList.remove('next1','next2','prev1','prev2','hovered'));
