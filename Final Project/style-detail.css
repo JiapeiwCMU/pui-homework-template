@@ -1,14 +1,104 @@
+::-webkit-scrollbar{
+    display:none;
+}
+
+body{
+    background:black;
+    color:white;
+}
+
+html {
+    --origin-x: calc(var(--click-x, 0.5) * 100%);
+    --origin-y: calc(var(--click-y, 0.5) * 100%);
+}
+
+html.is-changing .transition-reveal {
+    transition: clip-path 1s cubic-bezier(0.5, 0, 0.15, 1), mask-position 1s cubic-bezier(0.5, 0, 0.15, 1), -webkit-mask-position 1s cubic-bezier(0.5, 0, 0.15, 1);
+}
+
+html.to-circle .transition-reveal {
+    clip-path: circle(75% at 50% 50%);
+}
+
+html.to-circle .transition-reveal.is-previous-container {
+    clip-path: circle(0% at var(--origin-x) var(--origin-y));
+}
+
+.page{
+    z-index:1;
+}
+
+
+/* button to go back to main page */
+/* https://replit.com/@philippdaun/Swup-Demo-Overlay#index.html */
+.button {
+    display: inline-block;
+    border-radius: 999vw;
+    background: transparent;
+    border: 2px solid;
+    padding: .4em 1em;
+    transition-property: background, color;
+    transition-duration: 150ms;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 
 .heading{
     font-size:20px;
     font-family:'Arial', sans-serif;
     display:flex;
     justify-content:space-between;
-}
-a{
-    all:unset;
+    padding-left:15px;
+    padding-right:15px;
 }
 
+.content{
+    overflow-y:auto;
+    height: calc(100vh - 100px);
+}
+
+.content .popup-img{
+    position:fixed;
+    top:0; left:0;
+    background:rgba(0,0,0,0.9);
+    height:100%;
+    width:100%;
+    z-index:100;
+    display:none;
+    transition: 150ms;
+}
+
+.content .popup-img img{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:600px;
+    width:auto;
+    object-fit: contain;
+}
+
+.content .popup-img span{
+    position: absolute;
+    top:0;
+    right:10px;
+    font-size:60px;
+    font-weight:bolder;
+    color:white;
+    cursor:pointer;
+    z-index:100;
+
+}
+
+@media(max-width:700px){
+    .content .popup-img img{
+        width:95%;
+    }
+}
 
 .photo-display{
     display:flex;
@@ -32,6 +122,9 @@ a{
                         "img11 img11 img12 img12";
 }
 
+.container .photo{
+    cursor:pointer;
+}
 .container .img1{
     grid-area: img1;
 }
