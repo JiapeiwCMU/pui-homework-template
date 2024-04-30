@@ -4,69 +4,57 @@
     
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script defer src="https://unpkg.com/@swup/js-plugin@3"></script>
+        <script defer type="module" src="script.js"></script>
         <title>Photography Gallery</title>
-        <script defer src="script.js"></script>
     </head>
 
 
     <body>
-        <div class="heading">
-            <p>Photogrpahy Collection</p>
-            <p>By Jiapei Wang</p>
-            <p>Spring 2024</p>
+        <div id="swup" class="page transition-reveal">
+            <div class="heading">
+                <p id="main-logo">Photography Collection</p>
+                <!-- <p>By Jiapei Wang</p> -->
+                <p class="button">About</p>
+            </div>
+    
+            <div class="subheading01">
+                <p id="Recording">Recording</p>
+                <div id="horizontal-line"></div>
+                <p id="Life-Moments">Life Moments</p>
+            </div>
+    
+            <!-- All Album Covers -->
+            <div class="container">
+                <div class="box" id="album1" data-url="detail-page.html?album1">
+                    <span class="album-name">Album 1</span>
+                </div>
+                <div class="box" id="album2" data-url="detail-page.html?album2">
+                    <span class="album-name">Album 2</span>
+                </div>
+                <div class="box" id="album3" data-url="detail-page.html?album3">
+                    <span class="album-name">Album 3</span>
+                </div>
+                <div class="box" id="album4" data-url="detail-page.html?album4">
+                    <span class="album-name">Album 4</span>
+                </div>
+                <div class="box" id="album5" data-url="detail-page.html?album5">
+                    <span class="album-name">Album 5</span>
+                </div>
+                <div class="box" id="album6" data-url="detail-page.html?album6">
+                    <span class="album-name">Album 6</span>
+                </div>
+                <div class="box" id="album7" data-url="detail-page.html?album7">
+                    <span class="album-name">Album 7</span>
+                </div>
+                <div class="box" id="end-text">More is on the way...</div>
+            </div>
+    
+            <!-- <div class="subheading02">
+                <p>Photography</p>
+                <p>During</p>
+                <p>Travel</p>
+            </div> -->
         </div>
-
-        <div class="subheading01">
-            <p id="Recording">Recording</p>
-            <div id="horizontal-line"></div>
-            <p id="Life-Moments">Life Moments</p>
-        </div>
-
-        <!-- All Album Covers -->
-        <div class="container">
-            <!-- <a href="detail-page-1.html" class="box-link">
-                <div class="box" id="album1"></div>
-            </a>
-            <a href="detail-page-1.html" class="box-link">
-                <div class="box" id="album2"></div>
-            </a>
-            <a href="detail-page-1.html" class="box-link">
-                <div class="box" id="album3"></div>
-            </a>
-            <a href="detail-page-1.html" class="box-link">
-                <div class="box" id="album4"></div>
-            </a>
-            <a href="detail-page-1.html" class="box-link">
-                <div class="box" id="album5"></div>
-            </a> -->
-            <div class="box" id="album1" data-url="detail-page.html?album1">
-                <span class="album-name">Album 1</span>
-            </div>
-            <div class="box" id="album2" data-url="detail-page.html?album2">
-                <span class="album-name">Album 2</span>
-            </div>
-            <div class="box" id="album3" data-url="detail-page.html?album3">
-                <span class="album-name">Album 3</span>
-            </div>
-            <div class="box" id="album4" data-url="detail-page.html?album4">
-                <span class="album-name">Album 4</span>
-            </div>
-            <div class="box" id="album5" data-url="detail-page.html?album5">
-                <span class="album-name">Album 5</span>
-            </div>
-            <div class="box" id="album6" data-url="detail-page.html?album6">
-                <span class="album-name">Album 6</span>
-            </div>
-            <div class="box" id="album7" data-url="detail-page.html?album7">
-                <span class="album-name">Album 7</span>
-            </div>
-        </div>
-
-        <div class="subheading02">
-            <p>Photography</p>
-            <p>During</p>
-            <p>Travel</p>
-        </div>
-
     </body>
 </html>
