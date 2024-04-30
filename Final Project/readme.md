@@ -1,3 +1,7 @@
+To Start the webpage:
+Click Through "Go Live" in VS Code, there's a module setting when loading script.js that requires local server to load the page.
+
+
 Citations:
 1. Mouse Hovering over Card Animation: https://www.youtube.com/watch?v=sBAcMb3VkDg&ab_channel=OnlineTutorials
 2. Detail Gallery Page Photo Layout: https://www.youtube.com/watch?v=tHjZaKh-sbE&ab_channel=OnlineTutorials
