@@ -1,5 +1,26 @@
-// import Swup from 'https://unpkg.com/swup@4?module';
-// import SwupParallelPlugin from 'https://unpkg.com/@swup/parallel-plugin@0?module';
+import Swup from 'https://unpkg.com/swup@4?module';
+import SwupParallelPlugin from 'https://unpkg.com/@swup/parallel-plugin@0?module';
+
+// setup transition
+// https://replit.com/@philippdaun/Swup-Demo-Reveal#swup.js
+// const swup = new Swup({
+//   containers: ["#swup"],
+//   plugins: [new SwupParallelPlugin()]
+// });
+
+// swup.hooks.on('visit:start', (context) => {
+//   let x = 0.5;
+//   let y = 0.5;
+//   const event = context.trigger.event;
+//   if (event && typeof event.clientX === 'number') {
+//     x = event.clientX / window.innerWidth;
+//     y = event.clientY / window.innerHeight;
+//   }
+//   document.documentElement.style.setProperty('--click-x', x);
+//   document.documentElement.style.setProperty('--click-y', y);
+// });
+
+
 
 
 document.addEventListener("DOMContentLoaded",loadCover);
@@ -25,6 +46,7 @@ const boxes = document.querySelectorAll('.box')
 boxes.forEach(box =>{
 
     box.addEventListener('click',function(){
+        box.setAttribute('data-swup-animation', 'circle');
         window.location.href = this.getAttribute('data-url');
     })
 
@@ -56,9 +78,16 @@ boxes.forEach(box =>{
             nextSibling.classList.add('next1');  
         }
     })
+    
     box.addEventListener('mouseleave',(event)=>{
         const parent = event.target.parentElement;
         const siblings = parent.querySelectorAll('.next1,.next2,.prev1,.prev2,.hovered');
         siblings.forEach(sibling => sibling.classList.remove('next1','next2','prev1','prev2','hovered'));
     } )
 })
+
+
+
+
+
+
