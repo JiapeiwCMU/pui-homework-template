@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
+    
     
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script defer src="https://unpkg.com/@swup/js-plugin@3"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style.css"/>
+        <!-- <script defer src="https://unpkg.com/@swup/js-plugin@3"></script> -->
         <script defer type="module" src="script.js"></script>
         <title>Photography Gallery</title>
     </head>
 
 
     <body>
-        <div id="swup" class="page transition-reveal">
+        <main id="swup" class="transition-main">
             <div class="heading">
                 <p id="main-logo">Photography Collection</p>
                 <!-- <p>By Jiapei Wang</p> -->
@@ -55,6 +57,7 @@
                 <p>During</p>
                 <p>Travel</p>
             </div> -->
-        </div>
+        </main>
+        <div class="overlay transition-overlay"></div>
     </body>
 </html>
