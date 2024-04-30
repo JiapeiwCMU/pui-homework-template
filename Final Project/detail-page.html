@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-
     <head>
-        <link rel="stylesheet" type="text/css" href="style-detail.css">
-        <script defer src="https://unpkg.com/@swup/js-plugin@3"></script>
-        <script type="module" src="script-detail.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
         <title>Detail Album Page</title>
+        <link rel="stylesheet" href="style-detail.css" />
+        <!-- <script defer src="https://unpkg.com/@swup/js-plugin@3"></script> -->
+        <script type="module" src="script-detail.js"></script>
     </head>
 
     <body>
-        <div id="swup" class="page transition-reveal">
+        <main id="swup" class="transition-main">
             <div class="heading">
                 <p class="main-page" data-url="index.html">
-                    <a class="button">Back</a>      
+                    <a class="button" data-swup-transition="back">Back</a>      
                 </p>
                 <!-- <p>By Jiapei Wang</p> -->
                 <p>
@@ -30,15 +30,14 @@
             <div class="content">
                 <!-- Main photo display -->
                 <div class="photo-display"></div>
-
+                
                 <div class="popup-img">
                     <span>&times;</span>
                     <img src="/Final Project/resources/album1/8.JPG">
-                    
                 </div>
             </div>
-            
-        </div>
+        </main>
+        <div class="overlay transition-overlay"></div>
         
     </body>
 </html>
