@@ -1,24 +1,7 @@
 import Swup from 'https://unpkg.com/swup@4?module';
-import SwupParallelPlugin from 'https://unpkg.com/@swup/parallel-plugin@0?module';
-
-// setup transition
-// https://replit.com/@philippdaun/Swup-Demo-Reveal#swup.js
-// const swup = new Swup({
-//   containers: ["#swup"],
-//   plugins: [new SwupParallelPlugin()]
-// });
-
-// swup.hooks.on('visit:start', (context) => {
-//   let x = 0.5;
-//   let y = 0.5;
-//   const event = context.trigger.event;
-//   if (event && typeof event.clientX === 'number') {
-//     x = event.clientX / window.innerWidth;
-//     y = event.clientY / window.innerHeight;
-//   }
-//   document.documentElement.style.setProperty('--click-x', x);
-//   document.documentElement.style.setProperty('--click-y', y);
-// });
+const swup = new Swup({
+  containers: ["#swup"]
+});
 
 function makeAlbumPaths(albumCount, totalImages) {
   const albums = {};
@@ -46,6 +29,7 @@ console.log("albums:",albums);
 // Editing the html to display the albums chosen
 function generateAlbumHTML(albumImages) {
   const container = document.createElement('div');
+
   container.className = 'container';
   console.log("albumImages:",albumImages)
 
