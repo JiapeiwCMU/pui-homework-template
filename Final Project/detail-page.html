@@ -4,35 +4,40 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="style-detail.css">
+        <script defer src="https://unpkg.com/@swup/js-plugin@3"></script>
+        <script type="module" src="script-detail.js"></script>
         <title>Detail Album Page</title>
-        <script defer src="script-detail.js"></script>
     </head>
 
     <body>
-        <a href="index.html">
+        <div id="swup" class="page transition-reveal">
             <div class="heading">
-                <p>Photogrpahy Collection</p>
-                <p>By Jiapei Wang</p>
-                <p>Spring 2024</p>
+                <p class="main-page" data-url="index.html">
+                    <a class="button">Back</a>      
+                </p>
+                <!-- <p>By Jiapei Wang</p> -->
+                <p>
+                    <a class="button">
+                        About
+                    </a>
+                </p>
             </div>
-        </a>
-        
 
-        <div class="photo-display">
-            <!-- <div class="container">
-                <div class="photo img1"><img src="resources/album1/1.JPG"></div>
-                <div class="photo img2"><img src="resources/album1/2.JPG"></div>
-                <div class="photo img3"><img src="resources/album1/3.JPG"></div>
-                <div class="photo img4"><img src="resources/album1/4.JPG"></div>
-                <div class="photo img5"><img src="resources/album1/5.JPG"></div>
-                <div class="photo img6"><img src="resources/album1/6.JPG"></div>
-                <div class="photo img7"><img src="resources/album1/7.JPG"></div>
-                <div class="photo img8"><img src="resources/album1/8.JPG"></div>
-                <div class="photo img9"><img src="resources/album1/9.JPG"></div>
-                <div class="photo img10"><img src="resources/album1/10.JPG"></div>
-                <div class="photo img11"><img src="resources/album1/11.JPG"></div>
-                <div class="photo img12"><img src="resources/album1/12.JPG"></div>
-            </div> -->
+            <div class="album-title">
+
+            </div>
+
+            <div class="content">
+                <!-- Main photo display -->
+                <div class="photo-display"></div>
+
+                <div class="popup-img">
+                    <span>&times;</span>
+                    <img src="/Final Project/resources/album1/8.JPG">
+                    
+                </div>
+            </div>
+            
         </div>
         
     </body>
