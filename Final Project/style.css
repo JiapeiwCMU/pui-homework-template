@@ -1,28 +1,11 @@
+
 body{
     background:black;
     color:white;
 }
 
-html {
-    --origin-x: calc(var(--click-x, 0.5) * 100%);
-    --origin-y: calc(var(--click-y, 0.5) * 100%);
-}
 
-html.is-changing .transition-reveal {
-    transition: clip-path 1s cubic-bezier(0.5, 0, 0.15, 1), mask-position 1s cubic-bezier(0.5, 0, 0.15, 1), -webkit-mask-position 1s cubic-bezier(0.5, 0, 0.15, 1);
-}
 
-html.to-circle .transition-reveal {
-    clip-path: circle(75% at 50% 50%);
-}
-
-html.to-circle .transition-reveal.is-next-container {
-    clip-path: circle(0% at var(--origin-x) var(--origin-y));
-}
-
-.page{
-    z-index:3;
-}
 
 /* button to go back to main page */
 /* https://replit.com/@philippdaun/Swup-Demo-Overlay#index.html */
@@ -182,6 +165,46 @@ html.to-circle .transition-reveal.is-next-container {
 .box.hovered .album-name{
     visibility: visible;
     opacity: 1;
+}
+
+
+html.is-changing .transition-main {
+    transition: transform 400ms ease-in-out;
+}
+
+html.is-animating.is-leaving .transition-main {
+    transform: translateY(calc(1 * 5vh * var(--overlay-direction, 1)));
+}
+
+html.is-animating.is-rendering .transition-main {
+    transform: translateY(calc(-1 * 5vh * var(--overlay-direction, 1)));
+}
+
+
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: darkgrey;
+    opacity: 0;
+    transform: translate3d(0, calc(-1 * 100% * var(--overlay-direction, 1)), 0);
+    pointer-events: none;
+}
+
+html.is-changing .transition-overlay {
+    transition: transform 400ms ease-in-out;
+    opacity: 1;
+}
+
+html.is-animating .transition-overlay {
+    transform: translate3d(0, 0, 0);
+}
+
+html.is-rendering .transition-overlay {
+    transform: translate3d(0, calc(var(--overlay-direction, 1) * 100%), 0);
 }
 
 
