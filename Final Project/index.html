@@ -6,25 +6,32 @@
     <head>
         <title>Photography Gallery</title>
         <link defer rel="stylesheet" href="style.css">
-        <script defer type="module" src="script.js"></script>
-        <script defer src="https://unpkg.com/swup@4"></script>
-        <!-- <script defer src="https://unpkg.com/@swup/js-plugin@3"></script> -->
+        <!-- <script defer type="module" src="script.js"></script> -->
+        <script defer src="script.js"></script>
+
+        <!-- <script defer src="https://unpkg.com/swup@4"></script> -->
+        <script defer src="https://unpkg.com/@swup/js-plugin@3"></script>
         
     </head>
 
 
     <body>
-        <main id="swup" class="transition-main">
+        <main>
+
+            <div class="transition transition-1 is-active"></div>
+
             <div class="heading">
-                <p id="main-logo">Photography Collection</p>
+                <p id="main-logo">Jiapei Wang Photo Gallery</p>
                 <!-- <p>By Jiapei Wang</p> -->
-                <p class="button">About</p>
+                <p class="about-page" data-url="about.html">
+                    <a class="button" >About</a>
+                </p>
             </div>
     
             <div class="subheading01">
-                <p id="Recording">Recording</p>
+                <p id="Recording">"Recording"</p>
                 <div id="horizontal-line"></div>
-                <p id="Life-Moments">Life Moments</p>
+                <p id="Life-Moments">"Life Moments"</p>
             </div>
     
             <!-- All Album Covers -->
@@ -59,6 +66,5 @@
                 <p>Travel</p>
             </div> -->
         </main>
-        <div class="overlay transition-overlay"></div>
     </body>
 </html>
