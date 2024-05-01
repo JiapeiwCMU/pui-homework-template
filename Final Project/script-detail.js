@@ -1,23 +1,12 @@
-
 window.onload = () => {
   const transition_el = document.querySelector('.transition');
-  // const anchors = document.querySelectorAll('a')
-  // console.log("anchors:",anchors)
-
   setTimeout(() => {
     transition_el.classList.remove('is-active');
   }, 500);
-
-  // for(let i=0;i<anchors.length;i++){
-  //   const anchor = anchors[i];
-  //   anchor.addEventListener('click',e => {
-  //     e.preventDefault();
-  //     let target = e.target.href;
-  //     console.log(target)
-  //   })
-  // }
 }
 
+// dynamically load images on the detail page
+// index into the folders and find corresponding images to put into the grid
 function makeAlbumPaths(albumCount, totalImages) {
   const albums = {};
   for (let i=1; i<=albumCount; i++) {
@@ -25,7 +14,7 @@ function makeAlbumPaths(albumCount, totalImages) {
     const imagePaths = [];
     let currentAlbum=albumAltTexts[i-1]
     for (let img = 1; img <= totalImages; img++) {
-      // let thisImage = "resources/"+albumNumber+"/"+img+".JPG"
+      // Setting up image src and alt text for every image
       let imagePath = {
         src:"resources/"+albumNumber+"/"+img+".JPG",
         alt:currentAlbum[img-1]
@@ -36,15 +25,6 @@ function makeAlbumPaths(albumCount, totalImages) {
   }
   return albums;
 }
-
-const mainPage=document.querySelector(".main-page")
-mainPage.addEventListener('click',function(){
-  window.location.href = this.getAttribute('data-url');
-})
-const aboutPage=document.querySelector(".about-page")
-aboutPage.addEventListener('click',function(){
-  window.location.href = this.getAttribute('data-url');
-})
 
 // Make the albums using the function
 const albums = makeAlbumPaths(7, 12);
@@ -89,9 +69,7 @@ imgContainer.forEach(image =>{
   image.onclick = () =>{
     document.querySelector('.popup-img').style.display='block';
     document.querySelector('.popup-img img').src = image.getAttribute('src');
-    document.querySelector('.popup-img img').src = image.getAttribute('alt');
-
-
+    document.querySelector('.popup-img img').alt = image.getAttribute('alt');
   }
   document.querySelector('.popup-img span').onclick = () =>{
     document.querySelector('.popup-img').style.display='none';
@@ -99,6 +77,16 @@ imgContainer.forEach(image =>{
 
 })
 
+// When clicking on the "Back" or "About" buttons, guide to the intended pages
+const mainPage=document.querySelector(".main-page")
+mainPage.addEventListener('click',function(){
+  window.location.href = this.getAttribute('data-url');
+})
+const aboutPage=document.querySelector(".about-page")
+aboutPage.addEventListener('click',function(){
+  window.location.href = this.getAttribute('data-url');
+})
 
+// Loading the corresponding album title on top of the screen
 const albumName= document.querySelector('.album-title')
 albumName.innerHTML=currentAlbum
