@@ -1,4 +1,6 @@
-
+:root{
+    --dark:#212121;
+}
 body{
     background:black;
     color:white;
@@ -168,7 +170,25 @@ body{
 }
 
 
-html.is-changing .transition-main {
+.transition-1{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:2000;
+    background-color: #212121;
+    opacity:0;
+    pointer-events:none;
+    transition:0.5s ease-out;
+}
+
+.transition-1.is-active{
+    opacity:1;
+    pointer-events:all;
+}
+
+/* html.is-changing .transition-main {
     transition: transform 400ms ease-in-out;
 }
 
@@ -205,7 +225,7 @@ html.is-animating .transition-overlay {
 
 html.is-rendering .transition-overlay {
     transform: translate3d(0, calc(var(--overlay-direction, 1) * 100%), 0);
-}
+} */
 
 
 
