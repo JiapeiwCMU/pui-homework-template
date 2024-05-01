@@ -1,7 +1,26 @@
-import Swup from 'https://unpkg.com/swup@4?module';
-const swup = new Swup({
-  containers: ["#swup"]
-});
+// import Swup from 'https://unpkg.com/swup@4?module';
+// const swup = new Swup({
+//   containers: ["#swup"]
+// });
+window.onload = () => {
+  const transition_el = document.querySelector('.transition');
+  const anchors = document.querySelectorAll('a')
+  console.log("anchors:",anchors)
+
+  setTimeout(() => {
+    transition_el.classList.remove('is-active');
+  }, 500);
+
+  // for(let i=0;i<anchors.length;i++){
+  //   const anchor = anchors[i];
+  //   anchor.addEventListener('click',e => {
+  //     e.preventDefault();
+  //     let target = e.target.href;
+  //     console.log(target)
+  //   })
+  // }
+}
+
 
 function makeAlbumPaths(albumCount, totalImages) {
   const albums = {};
@@ -19,6 +38,10 @@ function makeAlbumPaths(albumCount, totalImages) {
 
 const mainPage=document.querySelector(".main-page")
 mainPage.addEventListener('click',function(){
+  window.location.href = this.getAttribute('data-url');
+})
+const aboutPage=document.querySelector(".about-page")
+aboutPage.addEventListener('click',function(){
   window.location.href = this.getAttribute('data-url');
 })
 
