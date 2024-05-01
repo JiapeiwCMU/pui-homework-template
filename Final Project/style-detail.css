@@ -235,3 +235,12 @@ body{
     font-size: 16px; 
     line-height: 1.5; 
 }
+
+.album-title{
+    position:absolute;
+    top:35px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:25px;
+    font-family:Arial, Helvetica, sans-serif;
+}
