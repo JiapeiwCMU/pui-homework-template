@@ -1,9 +1,9 @@
 const albumAltTexts=[
     // Album1
         [
-            "Blue-tone seaside port with may boats",
-            "Blue-tone seaside port with may boats",
-            "Blue-tone seaside port with may boats",
+            "Blue-tone seaside port with many boats",
+            "Blue-tone seaside port with many boats,slightly zoomed in",
+            "Blue-tone seaside port with many boats,a closer view",
             "White church in front of blue sky background",
             "Old car hidden behind trees, covered with many stamps",
             "White building with the name of Whistle Bar, decorated with brown window frames",
