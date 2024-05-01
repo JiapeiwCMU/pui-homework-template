@@ -22,6 +22,7 @@ window.onload = () => {
 }
 
 
+
 function makeAlbumPaths(albumCount, totalImages) {
   const albums = {};
   for (let i=1; i<=albumCount; i++) {
@@ -98,3 +99,7 @@ imgContainer.forEach(image =>{
   }
 
 })
+
+
+const albumName= document.querySelector('.album-title')
+albumName.innerHTML=currentAlbum
