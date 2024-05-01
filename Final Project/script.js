@@ -1,30 +1,13 @@
-// import Swup from 'https://unpkg.com/swup@4?module';
-// const swup = new Swup({
-//   containers: ["#swup"]
-// });
-
-
+// Transition
 window.onload = () => {
   const transition_el = document.querySelector('.transition');
-  // const anchors = document.querySelectorAll('.box')
-  // console.log("anchors:",anchors)
-
-
   setTimeout(() => {
     transition_el.classList.remove('is-active');
   }, 200);
-
-  // for(let i=0;i<anchors.length;i++){
-  //   const anchor = anchors[i];
-
-  //   anchor.addEventListener('click', e=>{
-  //     e.preventDefault();
-  //     let target = e.target.href;
-  //     console.log(target)
-  //   })
-  // }
 }
 
+
+// Load the album covers
 document.addEventListener("DOMContentLoaded",loadCover);
 
 function loadCover(){
@@ -42,19 +25,11 @@ function loadCover(){
     })
 }
 
-// load about page
-const aboutPage=document.querySelector(".about-page")
-aboutPage.addEventListener('click',function(){
-  window.location.href = this.getAttribute('data-url');
-})
-
 const boxes = document.querySelectorAll('.box')
 boxes.forEach(box =>{
-
     box.addEventListener('click', function() {
         window.location.href = this.getAttribute('data-url');
     })
-
     box.addEventListener('mouseenter',(event)=>{
         const prevSibling = event.target.previousElementSibling;
         const prevPrevSibling = prevSibling?.previousElementSibling;
@@ -72,7 +47,6 @@ boxes.forEach(box =>{
         if(prevSibling){
             prevSibling.classList.add('prev1');  
         }
-
         // add next2 class to the element after next
         if(nextNextSibling){
             nextNextSibling.classList.add('next2');  
@@ -91,3 +65,8 @@ boxes.forEach(box =>{
 })
 
 
+// load About page
+const aboutPage=document.querySelector(".about-page")
+aboutPage.addEventListener('click',function(){
+  window.location.href = this.getAttribute('data-url');
+})
