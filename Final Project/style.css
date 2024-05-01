@@ -27,7 +27,10 @@ body{
     background: rgba(255, 255, 255, 0.1);
 }
 
-
+h2{
+    font-weight:lighter;
+    font-size:45px;
+}
   
 
 /* Heading and subheading setup */
