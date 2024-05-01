@@ -1,12 +1,7 @@
-:root{
-    --dark:#212121;
-}
 body{
     background:black;
     color:white;
 }
-
-
 
 
 /* button to go back to main page */
@@ -22,16 +17,10 @@ body{
     white-space: nowrap;
     cursor: pointer;
   }
-  
 .button:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-h2{
-    font-weight:lighter;
-    font-size:45px;
-}
-  
 
 /* Heading and subheading setup */
 .heading{
@@ -42,11 +31,9 @@ h2{
     padding-left:15px;
     padding-right:15px;
 }
-
 #main-logo{
     font-size:25px;
 }
-
 .subheading01{
     font-size:45px;
     font-family:'Courier New';
@@ -55,36 +42,22 @@ h2{
     align-items:center;
     white-space:nowrap;
 }
-.subheading01,.subheading02 p{
+.subheading01 p{
     padding-left:15px;
     padding-right:15px;
 }
-
-/* .subheading01:hover p {
-    background-color:#475cd6;
-    color: white;
-    border-radius:10px;
-    transition:0.5s;
-} */
-
 #Recording:hover{
     background-color:white;
     color:black;
 }
-
 #Life-Moments:hover{
     background-color:white;
     color:black;
 }
-
-.subheading02{
+h2{
+    font-weight:lighter;
     font-size:45px;
-    font-family:'Courier New', monospace;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
 }
-
 #horizontal-line{
     width: 100%; 
     height: 2px; 
@@ -93,7 +66,7 @@ h2{
 }
 
 
-
+/* Styling for the album container */
 .container{
     min-height:250px;
     display:flex;
@@ -116,24 +89,20 @@ h2{
     margin-right: 20px;
     scroll-snap-align: start;
 }
-
 .container .box.hovered{
     scale:1.12;
     z-index:10;
     opacity:1;
 }
-
 .container .box.prev1, .container .box.next1{
     scale:1.1;
     opacity:0.7;
     z-index:3;
 }
-
 .container .box.prev2, .container .box.next2{
     scale:1.05;
     z-index:2;
 }
-
 #end-text{
     display:flex;
     align-items:center;
@@ -141,6 +110,7 @@ h2{
     font-size:18px;
     font-family:'Arial', sans-serif;
 }
+
 
 /* album name on hover*/
 .album-name{
@@ -150,11 +120,9 @@ h2{
     width:100%;
     height:100%;
     padding:10px;
-
     display:flex;
     align-items:flex-end;
     justify-content:flex-start;
-
     background-image:linear-gradient(to bottom, rgba(0,0,0,0),rgba(55,55,55,0.5));
     color:white;
     text-align: center; 
@@ -162,17 +130,16 @@ h2{
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.2s ease,visibility 0s; 
-
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     font-size:25px;
 }
-
 .box.hovered .album-name{
     visibility: visible;
     opacity: 1;
 }
 
 
+/* Transition when clicking to different pages */
 .transition-1{
     position:fixed;
     top:0;
@@ -190,48 +157,3 @@ h2{
     opacity:1;
     pointer-events:all;
 }
-
-/* html.is-changing .transition-main {
-    transition: transform 400ms ease-in-out;
-}
-
-html.is-animating.is-leaving .transition-main {
-    transform: translateY(calc(1 * 5vh * var(--overlay-direction, 1)));
-}
-
-html.is-animating.is-rendering .transition-main {
-    transform: translateY(calc(-1 * 5vh * var(--overlay-direction, 1)));
-}
-
-
-.transition-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-    background-color: darkgrey;
-    opacity: 0;
-    transform: translate3d(0, calc(-1 * 100% * var(--overlay-direction, 1)), 0);
-    pointer-events: none;
-}
-
-html.is-changing .transition-overlay {
-    transition: transform 400ms ease-in-out;
-    opacity: 1;
-}
-
-html.is-animating .transition-overlay {
-    transform: translate3d(0, 0, 0);
-}
-
-html.is-rendering .transition-overlay {
-    transform: translate3d(0, calc(var(--overlay-direction, 1) * 100%), 0);
-} */
-
-
-
-
-
-  
